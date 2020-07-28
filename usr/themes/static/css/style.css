@@ -1,0 +1,48 @@
+    /* CofUI_Assembly */
+    
+        .CofUI-jumbotron
+        {
+            padding-right: 0;
+            padding-left: 0;
+            border-radius: 0;
+            padding: 3rem 2rem;
+        }
+        
+        .CofUI-badge-rim 
+        {
+            position: relative;
+            display: inline-block;
+            padding: 0 6px;
+            font-size: 12px;
+            text-align: center;
+            background-color: #448aff;
+            color: #fff;
+            border-radius: 2px;
+            width: 6px;
+            height: 6px;
+            padding: 0;
+            border-radius: 50%;
+            margin-left: 5px;
+            margin-top: 1px;
+        }
+        
+        .CofUI-button-ts
+        {
+            position: relative;
+        }
+        
+        .CofUI-button-ts:active
+        {
+            transform: translateY(2px);
+            -webkit-transition: box-shadow 0.2s;
+            box-shadow: 0.5rem 0.875rem 2.375rem rgba(255,255,255,.12), 0.0625rem 0.1875rem 0.5rem rgba(255, 255, 255, 0);
+        }
+    /* CofUI_Auxiliary */
+        .CofUI-shadow-A1
+        {
+            box-shadow: 0.5rem 0.875rem 2.375rem rgba(39,44,49,.06), 0.0625rem 0.1875rem 0.5rem rgba(39,44,49,.03);
+        }
+        .CofUI-fillet-A1
+        {
+            border-radius: .5rem;
+        }

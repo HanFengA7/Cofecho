@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <?php include(Usr_Ts_PATH.'css.source.tpl'); ?>
+    <title>Cofecho</title>
+  </head>
+
+ 
+  <body class="mdui-color-grey-50">
+      
+    <nav class="mdui-appbar">
+      <div class="mdui-toolbar mdui-color-indigo-900">
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <a href="javascript:;" class="mdui-typo-headline">Cofecho</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="search"><i class="mdui-icon material-icons">search</i></a>
+      </div>
+    </nav>
+    
+    <div class="CofUI-jumbotron mdui-color-indigo-700">
+        <div class="mdui-container">
+            <h1 style="font-weight: 300;">Cofecho 1.0 Alpha</h1>
+            <h3 style="font-weight: 300;">High performance low occupancy blog program!</h3>
+        </div>
+    </div>
+    
+    <div class="mdui-container">
+        <div class="mdui-container">
+            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1" style="top: -1.8rem;">
+              <div class="mdui-card-content">
+                  <span id="rand-character"></span>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!-- dialog !-->
+  <div class="mdui-dialog" id="search-dialog">
+    <div class="mdui-dialog-content">
+      <div class="mdui-row">
+        <div class="mdui-col-xs-11">
+          <div class="mdui-textfield">
+            <input class="mdui-textfield-input" type="text" placeholder="Search"/>
+          </div>
+        </div>
+        <div class="mdui-col-xs-1">
+          <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-color-theme-accent" style="margin-top: 23px;"><i class="mdui-icon material-icons">search</i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- dialog !-->
+
+
+    <div class="mdui-container">
+      <div class="mdui-row">
+          
+        <div class="mdui-col-xs-12 mdui-col-sm-3">
+            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts mdui-ripple">
+              <div class="mdui-card-header">
+                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=599487077@qq.com&spec=640"/>
+                <div class="mdui-card-header-title" style="font-weight: 400;">Mengkl<div class="mdui-float-right CofUI-badge-rim"></div></div>
+                <div class="mdui-card-header-subtitle">她很懒什么都没写...</div>
+              </div>
+            </div>
+        </div>
+        
+        
+        <div class="mdui-col-xs-12 mdui-col-sm-9">
+            <div class="mdui-hidden-md-up" style="margin-top: 11px;"></div>
+            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts">
+    			<div class="mdui-card-primary">
+    		    	<div class="mdui-card-primary-title">Women's clothing from zero to countless</div>
+    		    </div>
+    		    <div class="mdui-divider"></div> 
+    			<div class="mdui-card-header" style="background-color: whitesmoke;">
+                	<div class="mdui-row">
+    	                <div class="mdui-col-xs-11">   
+    		                <span itemprop="image">
+    		                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=599487077@qq.com&spec=640">
+    		                </span>
+    	                    <div class="mdui-card-header-title" style="font-weight: 400;">Mengkl</div>
+    	                    <div class="mdui-card-header-subtitle">2020-07-26</div>
+    	                </div>
+    	                <div class="mdui-col-xs-1" style="transform: translateY(-95%);">   
+    	            	<a href="" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple mdui-float-right"><i class="mdui-icon material-icons" style="color: #e0e0e0;">&#xe31c;</i></a>
+    	                </div>
+    			    </div>
+    		  	</div>		
+            </div>
+            <br/>
+            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts">
+    			<div class="mdui-card-primary">
+    		    	<div class="mdui-card-primary-title">Welcome to Cofecho</div>
+    		    </div>
+    		    <div class="mdui-divider"></div> 
+    			<div class="mdui-card-header" style="background-color: whitesmoke;">
+                	<div class="mdui-row">
+    	                <div class="mdui-col-xs-11">   
+    		                <span itemprop="image">
+    		                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=599487077@qq.com&spec=640">
+    		                </span>
+    	                    <div class="mdui-card-header-title" style="font-weight: 400;">Mengkl</div>
+    	                    <div class="mdui-card-header-subtitle">2020-07-26</div>
+    	                </div>
+    	                <div class="mdui-col-xs-1" style="transform: translateY(-95%);">   
+    	            	<a href="" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple mdui-float-right"><i class="mdui-icon material-icons" style="color: #e0e0e0;">&#xe31c;</i></a>
+    	                </div>
+    			    </div>
+    		  	</div>		
+            </div>
+            
+        </div>
+      </div>
+    </div>
+    
+    <br/>
+    <br/>
+
+ 
+
+<script>
+      function randomCharacter(element,characters=["UNDEFINED"]){
+        var settings = {
+          el:element,
+          chars:characters,
+          delay:{
+            cycle:4000,
+            char:45
+          },
+          intervals:{
+            cycle:null,
+            char:null
+          },
+          progress:{
+            cycle:null,
+            char:null
+          }
+        };
+        function updateEntire(){
+          //if(!settings.intervals.char){
+            settings.progress.cycle = Math.random()*settings.chars.length|0;
+            settings.progress.char = 0;
+            //settings.intervals.char = setInterval(updateOneCharacter,settings.delay.char);
+          //}
+        }
+        function updateOneCharacter(){
+       // if(settings.progress.char++<settings.chars[settings.progress.cycle].length)
+          document.querySelector(settings.el).innerText = 
+            settings.chars[settings.progress.cycle].substr(0,settings.progress.char)+
+            Math.random().toString(16).substr(2,settings.chars[settings.progress.cycle].length-settings.progress.char);
+         // else
+         //   settings.intervals.char = clearInterval(settings.intervals.char);
+        }
+        function cycleController(){
+          //Finally I decided to use a controller to control the cycles looping.
+          if(!settings.intervals.char) {
+            updateEntire();
+            settings.intervals.char = setInterval(function(){
+              if(settings.progress.char++<settings.chars[settings.progress.cycle].length)
+                updateOneCharacter();
+              else
+                settings.intervals.char = clearInterval(settings.intervals.char);
+            },settings.delay.char);
+          }
+        }
+        settings.__proto__.restart = function(cycle=4000,char=45){
+          clearInterval(settings.intervals.cycle);
+          clearInterval(settings.intervals.char);
+          settings.intervals.char = null;//Prevent exceptions.
+          settings.delay = {cycle:cycle,char:char};
+          settings.intervals.cycle = setInterval(cycleController,cycle);
+          cycleController();//I don't want to wait for a few seconds first.
+        }
+        Object.freeze(settings.__proto__);//Prevent unexpected changes.
+        settings.restart();//Start the refresher.
+        return settings;
+      }
+      var example = new randomCharacter("#rand-character",[
+        "焕曰:「风栖今日如寻常，究竟是道德沦丧还是人性扭曲？」",
+        "焕曰:「联合社区中许多单身狗们均保持了沉默。为什么呢？」",
+        "可曰:「小考小玩,大考大玩！」",
+        "可曰:「每日都做着超乎寻常的繁杂的脑内运动。」",
+        "焕曰:「社长更换了头像，标志着联合社区的扫黄打非工作进入了新的阶段。」",
+        "叉·赫鲁晓夫·鸡:「规范好自己的行为行动，尽量避免违背条例精神的行为的发生。」"
+      ]);
+   </script>
+   <?php include(Usr_Ts_PATH.'js.source.tpl'); ?>
+  </body>
+</html>
