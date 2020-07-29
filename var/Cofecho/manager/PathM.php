@@ -40,6 +40,8 @@
               define('Usr_Ts_PATH', Usr_T_PATH . 'static/');    #[./usr/themes/static/]
                 define('Usr_Tsc_PATH', Usr_Ts_PATH . 'css/');   #[./usr/themes/static/css/]
                 define('Usr_Tsj_PATH', Usr_Ts_PATH . 'js/');    #[./usr/themes/static/js/]
+              define('Usr_Tp_PATH', Usr_T_PATH . 'page/');    #[./usr/themes/page/]
+                define('Usr_Tpi_PATH', Usr_Tp_PATH . 'inc/');    #[./usr/themes/page/inc/]
                 
             define('Usr_M_PATH', Usr_PATH . '/modules/');    #[./usr/modules/]
               define('Usr_M_S__PATH', Usr_M_PATH . 'system/');  #[./usr/modules/system/]

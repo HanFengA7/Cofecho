@@ -5,7 +5,21 @@
     crossorigin="anonymous"
 />
 
+<link
+    rel="stylesheet"
+    href="//at.alicdn.com/t/font_1971030_qkpauz8i628.css"
+/>
+
 <link 
     rel="stylesheet"
     href="<?php echo(Usr_Tsc_PATH); ?>style.css"
 />
+
+<style type="text/css">
+    .Cofecho_icon {
+       width: 1.5em; height: 1.5em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+</style>

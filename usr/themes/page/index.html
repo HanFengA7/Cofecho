@@ -1,32 +1,3 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <?php include(Usr_Ts_PATH.'css.source.tpl'); ?>
-    <title>Cofecho</title>
-  </head>
-
- 
-  <body class="mdui-color-grey-50">
-      
-    <nav class="mdui-appbar">
-      <div class="mdui-toolbar mdui-color-indigo-900">
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-        <a href="javascript:;" class="mdui-typo-headline">Cofecho</a>
-        <div class="mdui-toolbar-spacer"></div>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="search"><i class="mdui-icon material-icons">search</i></a>
-      </div>
-    </nav>
-    
-    <div class="CofUI-jumbotron mdui-color-indigo-700">
-        <div class="mdui-container">
-            <h1 style="font-weight: 300;">Cofecho 1.0 Alpha</h1>
-            <h3 style="font-weight: 300;">High performance low occupancy blog program!</h3>
-        </div>
-    </div>
-    
     <div class="mdui-container">
         <div class="mdui-container">
             <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1" style="top: -1.8rem;">
@@ -36,41 +7,51 @@
             </div>
         </div>
     </div>
-    
-    
-<!-- dialog !-->
-  <div class="mdui-dialog" id="search-dialog">
-    <div class="mdui-dialog-content">
-      <div class="mdui-row">
-        <div class="mdui-col-xs-11">
-          <div class="mdui-textfield">
-            <input class="mdui-textfield-input" type="text" placeholder="Search"/>
-          </div>
-        </div>
-        <div class="mdui-col-xs-1">
-          <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-color-theme-accent" style="margin-top: 23px;"><i class="mdui-icon material-icons">search</i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- dialog !-->
-
-
     <div class="mdui-container">
       <div class="mdui-row">
           
-        <div class="mdui-col-xs-12 mdui-col-sm-3">
+        <div class="mdui-col-xs-12 mdui-col-sm-4">
             <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts mdui-ripple">
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=599487077@qq.com&spec=640"/>
-                <div class="mdui-card-header-title" style="font-weight: 400;">Mengkl<div class="mdui-float-right CofUI-badge-rim"></div></div>
+                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=<?php echo $Cofeecho_User_Class -> QInfo_Root('qq');?>@qq.com&spec=640"/>
+                <div class="mdui-card-header-title" style="font-weight: 400;">
+                    <?php echo $Cofeecho_User_Class -> QInfo_Root('username');?>
+                    <div class="mdui-float-right CofUI-badge-rim"></div>
+                </div>
                 <div class="mdui-card-header-subtitle">她很懒什么都没写...</div>
               </div>
+              <div class="CofUI-divider"></div>
+                    <div class="mdui-card-actions">
+                        <div class="CofUI-box-iconList">
+
+                            <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple" mdui-tooltip="{content: 'QQ'}">
+                                <svg class="Cofecho_icon" aria-hidden="true">
+                                    <use xlink:href="#Cofecho_icon_QQ"></use>
+                                </svg>
+                            </button>
+                            <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple" mdui-tooltip="{content: '相册'}">
+                                <svg class="Cofecho_icon" aria-hidden="true">
+                                    <use xlink:href="#Cofecho_icon_xiangce"></use>
+                                </svg>
+                            </button>
+                            <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple" mdui-tooltip="{content: '提问箱'}">
+                                <svg class="Cofecho_icon" aria-hidden="true">
+                                    <use xlink:href="#Cofecho_icon_tiwen"></use>
+                                </svg>
+                            </button>
+                            
+                        </div>
+                    </div>
+            </div>
+            
+            <br/>
+            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts mdui-ripple">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="//music.163.com/outchain/player?type=2&id=25706282&auto=0&height=66"></iframe>
             </div>
         </div>
         
         
-        <div class="mdui-col-xs-12 mdui-col-sm-9">
+        <div class="mdui-col-xs-12 mdui-col-sm-8">
             <div class="mdui-hidden-md-up" style="margin-top: 11px;"></div>
             <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts">
     			<div class="mdui-card-primary">
@@ -120,8 +101,6 @@
     
     <br/>
     <br/>
-
- 
 
 <script>
       function randomCharacter(element,characters=["UNDEFINED"]){
@@ -188,7 +167,4 @@
         "焕曰:「社长更换了头像，标志着联合社区的扫黄打非工作进入了新的阶段。」",
         "叉·赫鲁晓夫·鸡:「规范好自己的行为行动，尽量避免违背条例精神的行为的发生。」"
       ]);
-   </script>
-   <?php include(Usr_Ts_PATH.'js.source.tpl'); ?>
-  </body>
-</html>
+</script>

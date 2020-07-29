@@ -37,7 +37,24 @@
             -webkit-transition: box-shadow 0.2s;
             box-shadow: 0.5rem 0.875rem 2.375rem rgba(255,255,255,.12), 0.0625rem 0.1875rem 0.5rem rgba(255, 255, 255, 0);
         }
-    /* CofUI_Auxiliary */
+        
+        .CofUI-box-iconList
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid var(--border);
+           /* padding: 5px 15px;*/
+        }
+        
+        .CofUI-divider
+        {
+            border-bottom: 1px dashed;
+            border-bottom-color: #e0e0e0;
+        }
+        
+        /* CofUI_Auxiliary */
         .CofUI-shadow-A1
         {
             box-shadow: 0.5rem 0.875rem 2.375rem rgba(39,44,49,.06), 0.0625rem 0.1875rem 0.5rem rgba(39,44,49,.03);

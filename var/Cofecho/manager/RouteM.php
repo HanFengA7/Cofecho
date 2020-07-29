@@ -20,18 +20,15 @@ final class Cofecho_RouteM{
     
     private static function _set_const(){
         
-        #RouteTest
-    	if($_GET["Route"] == "Yes" )
+    	#UserLogin_Route
+    	if($_GET["User"] == "Login" or $_GET["User"] == "login")
     	{
-    	    echo("Cofecho_RouteM Yes!");
+            #载入模板
+            $page['body_class'] = 'mdui-color-grey-50';
+            $page['body_file'] = (Usr_Tp_PATH.'login.html');
+            require(Usr_T_PATH.'main.php');
+            exit();
     	}
     	
-    	#XXX
-    	if($_GET["XXX"] == "XXX")
-    	{
-            //code
-    	    exit();
-    	}
-        
     }
 }

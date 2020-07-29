@@ -1,24 +1,23 @@
 <?php
-$config = array(
-                'dsn' => 'mysql:host='.$GLOBALS['host'].';dbname='.$GLOBALS['database'],
-                'name' => $GLOBALS['username'],
-                'password' => $GLOBALS['password'],
-            );
+
+//include(Var_PATH.'/config.php');
+/**
+ * [Cofecho_DB_Class]
+ */
 class Cofecho_DB_Class{
   protected $pdo;
   protected $res;
   protected $config;
 
   /*构造函数*/
-  function __construct($config){
-    $this->Config = $config;
+  function __construct(){
     $this->connect();
   }
 
   /*数据库连接*/
   public function connect(){
     try {
-        $this->pdo = new PDO($this->Config['dsn'], $this->Config['name'], $this->Config['password']);
+        $this->pdo = new PDO("mysql:host=".$GLOBALS['host'].";dbname=".$GLOBALS['database'], $GLOBALS['username'], $GLOBALS['password']);
         $this->pdo->query('set names utf8;');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //把结果序列化成stdClass
