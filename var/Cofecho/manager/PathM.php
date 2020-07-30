@@ -48,7 +48,8 @@
               define('Usr_M_S_U__PATH', Usr_M_PATH . '/system/user/');  #[./usr/modules/system/user/]
               define('Usr_M_S_U_C__PATH', Usr_M_PATH . '/system/user/class/');  #[./usr/modules/system/user/class/]
               
-        include(Var_PATH.'/config.php');
+            define('Usr_C_PATH', Usr_PATH . '/controllers/');    #[./usr/controllers/]
+              
     }
 }
 ?>

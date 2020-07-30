@@ -7,28 +7,32 @@
  **/
  
  /**
- * Cofecho_RouteM [ 0.1 ]
+ * Cofecho_RouteM [ 0.2 ]
  * 路由管理器
  * [ Cofecho_RouteM::Go(); ]
  **/
   
-final class Cofecho_RouteM{
+class Cofecho_RouteM{
     
-    public static function Go(){
-        self::_set_const();
+    protected $routes = [];
+    
+    public static function Go($file){
+        $router = new self();
+        require $file;
+        return $router;
     }
     
-    private static function _set_const(){
+    public function define($routes){
+        $this->routes = $routes;
+    }
+    
+    public function direct($url){
+        if(array_key_exists($url,$this->routes)){
+            return $this->routes[$url];
+        }
+        throw new Exception("NO NO NO url!");
         
-    	#UserLogin_Route
-    	if($_GET["User"] == "Login" or $_GET["User"] == "login")
-    	{
-            #载入模板
-            $page['body_class'] = 'mdui-color-grey-50';
-            $page['body_file'] = (Usr_Tp_PATH.'login.html');
-            require(Usr_T_PATH.'main.php');
-            exit();
-    	}
-    	
     }
+    
+    
 }

@@ -7,6 +7,8 @@
  **/
 session_start();
 
+include('./var/config/config.php');
+
 #路径管理器
 require_once('./var/Cofecho/manager/PathM.php');
 Cofecho_PathM::Go();
@@ -15,13 +17,7 @@ Cofecho_PathM::Go();
 require_once(Var_C_PATH.'Cofecho_User_Class.php');
 
 #路由管理器
-$page['body_class'] = 'mdui-loaded dui-color-grey-50';
 require_once(C_Manager_PATH.'RouteM.php');
-Cofecho_RouteM::Go();
-
-#载入模板
-$Cofeecho_User_Class = new Cofeecho_User_Class();
-$page['body_class'] = 'mdui-color-grey-50';
-$page['body_file'] = (Usr_Tp_PATH.'index.html');
-require(Usr_T_PATH.'main.php');
+$routes_url = trim($_SERVER['REQUEST_URI'],'/');
+require Cofecho_RouteM::Go(Var_PATH.'/config/routes.php')->direct($routes_url);
 
