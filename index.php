@@ -6,18 +6,19 @@
  * Author: 谭灿 <tancan137@foxmail.com>
  **/
 session_start();
+require('./var/config/config.php');
 
-include('./var/config/config.php');
-
-#路径管理器
-require_once('./var/Cofecho/manager/PathM.php');
-Cofecho_PathM::Go();
-
+#管理器
+require('./var/Cofecho/manager/PathM.php');
+    Cofecho_PathM::Go();
+require(C_Manager_PATH.'RouteM.php');
+require(C_Manager_PATH.'ErrorM.php');
+    
 #Class
-require_once(Var_C_PATH.'Cofecho_User_Class.php');
+require(Var_C_PATH.'Cofecho_Request_Class.php');
+require(Var_C_PATH.'Cofecho_DB_Class.php');
+require(Var_C_PATH.'Cofecho_User_Class.php');
 
-#路由管理器
-require_once(C_Manager_PATH.'RouteM.php');
-$routes_url = trim($_SERVER['REQUEST_URI'],'/');
-require Cofecho_RouteM::Go(Var_PATH.'/config/routes.php')->direct($routes_url);
-
+#Code
+    require Cofecho_RouteM::Go(Var_PATH.'/config/routes.php')
+            ->direct(Cofecho_Request_Class::url());

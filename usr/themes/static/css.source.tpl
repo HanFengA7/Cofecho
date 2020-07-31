@@ -12,7 +12,7 @@
 
 <link 
     rel="stylesheet"
-    href="<?php echo(Usr_Tsc_PATH); ?>style.css"
+    href="<?=$GLOBALS['url'].Usr_Tsc_PATH.'style.css'?>"
 />
 
 <style type="text/css">

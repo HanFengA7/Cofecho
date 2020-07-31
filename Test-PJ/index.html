@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+      integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
+      crossorigin="anonymous"
+    />
+    <title>P1</title>
+  </head>
+  <body>
+    <div id="page">
+        <a href="https://cofecho.lychape.cn/Test-PJ/2.html">P2</a>
+    <h1>P1</h1>
+    <BR/>
+    
+
+
+<style>
+    .AB_detail-info {
+    overflow: hidden;
+    padding: 10px 20px;
+    margin: 0;
+    border-top: 1px dashed #e0e0e0;
+    color: #626262;
+    font-size: 14px;
+    line-height: 19px;
+    background-color: #fafafa9e;
+}
+</style>
+
+        <div class="mdui-container">  
+            <div class="mdui-container" style="width: 75%;"> 
+            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1" style="top: -3rem; margin: 0 auto; position: relative;" >
+                <div class="mdui-row mdui-row-gapless">
+                  <!--模块区-->  
+                  <div class="mdui-col-md-6 mdui-hidden-sm-down mdui-shadow-5 AB_opacity_1" style="background-image: url(https://tva3.sinaimg.cn/large/87c01ec7gy1frmrxuzha8j21hc0u0gur.jpg); height: 266px; background-size: cover;z-index: 2;">
+                  </div>
+                  
+                  <!--登录区-->  
+                  <div class="mdui-col-sm-12 mdui-col-md-6">
+                      <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title mdui-text-center" style="line-height: 33px;">Login</div>
+                        <a class="mdui-text-center"></a>
+                      </div>
+                      <form action="/Login" method="POST">
+                      <div class="mdui-card-content AB_detail-info">
+                        <div class="mdui-textfield">
+                            <i class="mdui-icon material-icons">account_circle</i>
+                            <input class="mdui-textfield-input" type="text" name="username" id="user_name" placeholder="ID">
+                        </div>
+                        <div class="mdui-textfield">
+                            <i class="mdui-icon material-icons">lock</i>
+                            <input class="mdui-textfield-input" type="password" name="password" id="pass_word" placeholder="Password">
+                        </div>
+                      </div>
+                      <div class="mdui-card-actions">
+                        <small><a href="register.php" class="mdui-btn mdui-ripple">高级设置</a></small>
+                        <button name="submit" id="submit" type="button" class="mdui-btn mdui-btn-icon  mdui-ripple mdui-float-right"><i class="mdui-icon material-icons">last_page</i></button>
+                      </div>
+                      </form>
+                  </div>
+                  
+                </div>
+            </div>
+            </div>
+            <br/>
+            
+            <div class="mdui-col-xs-12 mdui-col-sm-12">
+                <div class="mdui-card AB_radius_2 mdui-shadow-15 AB_opacity_1">
+                    <div class="mdui-card-actions">
+                        <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple"><i class="mdui-icon material-icons" mdui-tooltip="{content: '空间', position: 'top'}">&#xe30d;</i></button>
+                        <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple mdui-hidden-sm-down"><i class="mdui-icon material-icons" mdui-tooltip="{content: '相册', position: 'top'}">&#xe251;</i></button>
+                        <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple"><i class="mdui-icon material-icons" mdui-tooltip="{content: '空投', position: 'top'}">&#xe1e2;</i></button>
+                        <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple"><i class="mdui-icon material-icons" mdui-tooltip="{content: '朋友', position: 'top'}">&#xe7ef;</i></button>
+                        <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple"><i class="mdui-icon material-icons" mdui-tooltip="{content: '同学录', position: 'top'}">&#xe427;</i></button>
+                        <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple"><i class="mdui-icon material-icons" mdui-tooltip="{content: '提问箱', position: 'top'}">&#xe560;</i></button>
+                        <button name="submit" class="mdui-btn mdui-btn-icon mdui-color-grey-200 mdui-ripple mdui-float-right"><i class="mdui-icon material-icons">blur_on</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    
+    </div>
+<script 
+    src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
+></script>
+<script 
+    src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"
+></script>
+<script>
+    $(document).pjax('a', '#page', {fragment:'#page', timeout:8000});
+   $(document).on('submit', 'form', function (event) {
+          //这是提交表单的pjax。form表示所有的提交表单都会执行pjax，比如搜索和提交评论，可自行修改改成你想要执行pjax的form id或class。#container 同上改成你主题的内容主体id或class。
+        $.pjax.submit(event, '#container', {
+            fragment:'#container', timeout:6000
+        });
+    });
+</script>
+
+  </body>
+</html>

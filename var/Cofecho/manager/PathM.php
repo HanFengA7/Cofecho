@@ -13,6 +13,7 @@
  **/
  
  final class Cofecho_PathM{
+    
     public static function Go(){
         self::_set_const();
     }

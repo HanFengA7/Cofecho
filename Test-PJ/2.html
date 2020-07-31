@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- MDUI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+      integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
+      crossorigin="anonymous"
+    />
+    <title>P1</title>
+  </head>
+  <body>
+    <div id="page">
+        <a href="https://cofecho.lychape.cn/Test-PJ/index.html">P1</a>
+    <h1>P2</h1>
+    </div>
+<script 
+    src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
+></script>
+<script 
+    src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"
+></script>
+<script>
+    $(document).pjax('a', '#page', {fragment:'#page', timeout:8000});
+</script>
+
+  </body>
+</html>

@@ -29,10 +29,16 @@ class Cofecho_RouteM{
     public function direct($url){
         if(array_key_exists($url,$this->routes)){
             return $this->routes[$url];
+        }else{
+            $ERROEX = '     找不到  <kbd>' . $_SERVER['REQUEST_URI'] . '</kbd>   相关路径!';
+            $Cofeecho_User_Class = new Cofeecho_User_Class();
+            $page['body_class'] = 'mdui-loaded mdui-color-grey-50';
+            $page['body_file'] = (Usr_Tp_PATH.'error.html');
+            require(Usr_T_PATH.'main.php');
+            die();
         }
-        throw new Exception("NO NO NO url!");
+        //throw new Exception("NO NO NO url!");
         
     }
-    
     
 }

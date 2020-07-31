@@ -27,10 +27,6 @@ class Cofeecho_User_Class extends Cofecho_DB_Class
         $sql = 'SELECT * FROM `Cofecho_User` WHERE `uid` = 1';
         parent::query($sql);
         $rs = parent::fetchAll();
-            if ($userinfo != "password") {
-                return $rs[0][$userinfo];
-            }else {
-                return '权限不足！！！';
-            }
+        return $rs[0][$userinfo];
     }
 }
