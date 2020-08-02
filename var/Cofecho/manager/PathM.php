@@ -43,6 +43,8 @@
                 define('Usr_Tsj_PATH', Usr_Ts_PATH . 'js/');    #[./usr/themes/static/js/]
               define('Usr_Tp_PATH', Usr_T_PATH . 'page/');    #[./usr/themes/page/]
                 define('Usr_Tpi_PATH', Usr_Tp_PATH . 'inc/');    #[./usr/themes/page/inc/]
+              define('Usr_TP_PATH', Usr_T_PATH . 'panel/');   #[./usr/themes/panel/]
+                define('Usr_TP_P_PATH', Usr_T_PATH . 'panel/page/');   #[./usr/themes/panel/page/]
                 
             define('Usr_M_PATH', Usr_PATH . '/modules/');    #[./usr/modules/]
               define('Usr_M_S__PATH', Usr_M_PATH . 'system/');  #[./usr/modules/system/]

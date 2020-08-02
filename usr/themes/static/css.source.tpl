@@ -7,7 +7,7 @@
 
 <link
     rel="stylesheet"
-    href="//at.alicdn.com/t/font_1971030_qkpauz8i628.css"
+    href="//at.alicdn.com/t/font_1971030_sfx0jstxolc.css"
 />
 
 <link 

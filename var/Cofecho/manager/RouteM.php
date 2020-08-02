@@ -9,7 +9,7 @@
  /**
  * Cofecho_RouteM [ 0.2 ]
  * 路由管理器
- * [ Cofecho_RouteM::Go(); ]
+ * [ Cofecho_RouteM::Go($file); ]
  **/
   
 class Cofecho_RouteM{

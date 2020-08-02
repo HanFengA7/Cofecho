@@ -13,5 +13,5 @@
  
 	// 提示信息
 	$error_tip['1'] = "欢迎下次光临,$username";
-    Cofecho_ErrorM::Error_A($error_tip['1'],'3','/');
+    Cofecho_ErrorM::Error_A($error_tip['1'],'2','/');
 ?>
