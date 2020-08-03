@@ -37,6 +37,8 @@ class Cofeecho_User_Class extends Cofecho_DB_Class
             $Key = md5($_SESSION['username'],$_SESSION['islogin']);
             if ($_SESSION['LCodeKey'] = $Key){
                 return true;
+            }else{
+                return false;
             }
         }else{
             return false;

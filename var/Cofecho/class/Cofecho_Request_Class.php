@@ -18,4 +18,13 @@ class Cofecho_Request_Class
             parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH),'/'
         );
     }
+
+    /**
+     * Cofecho_Request_Class::method();
+     */
+    public static function method()
+    {   
+        return $_SERVER['REQUEST_METHOD'];
+    }
+
 }

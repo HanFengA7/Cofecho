@@ -1,12 +1,12 @@
 <?php
-    $router->define([
-        '' => Usr_C_PATH.'Index/index.php',
+$Suffix['1'] = '.php';
+$Suffix['2'] = '.html';
 
-        'Panel' => Usr_C_PATH.'Panel/index.php',
-        'Panel/AC-Write' => Usr_C_PATH.'Panel/AC-write.php',
-        'Panel/AC-List' => Usr_C_PATH.'Panel/AC-write.php',
+$router->get('',(Usr_C_PATH.'Index/index'.$Suffix['1']));
 
-        'User/Login' => Usr_C_PATH.'User/login.php',
-        'User/Logout' => Usr_C_PATH.'User/logout.php',
-        'User/Info' => Usr_C_PATH.'User/info.php'
-    ]);
+$router->get('Panel/AC-Write',(Usr_C_PATH.'Panel/AC-write'.$Suffix['1']));
+$router->get('Panel/AC-List',(Usr_C_PATH.'Panel/AC-list'.$Suffix['1']));
+
+$router->get('User/Login',(Usr_C_PATH.'User/login'.$Suffix['1']));
+$router->get('User/Logout',(Usr_C_PATH.'User/logout'.$Suffix['1']));
+$router->get('User/Info',(Usr_C_PATH.'User/info'.$Suffix['1']));

@@ -14,21 +14,32 @@
   
 class Cofecho_RouteM{
     
-    protected $routes = [];
+    protected $routes = [
+       'GET' => [],
+       'POST' => []
+    ];
     
     public static function Go($file){
         $router = new self();
         require $file;
         return $router;
     }
+
+    public function get($url,$controller){
+        $this->routes['GET'][$url] = $controller;
+    }
+
+    public function post($url,$controller){
+        $this->routes['POST'][$url] = $controller;
+    }
     
     public function define($routes){
         $this->routes = $routes;
     }
     
-    public function direct($url){
-        if(array_key_exists($url,$this->routes)){
-            return $this->routes[$url];
+    public function direct($url,$methodType){
+        if(array_key_exists($url,$this->routes[$methodType])){
+            return $this->routes[$methodType][$url];
         }else{
             $ERROEX = '     找不到  <kbd>' . $_SERVER['REQUEST_URI'] . '</kbd>   相关路径!';
             $Cofeecho_User_Class = new Cofeecho_User_Class();

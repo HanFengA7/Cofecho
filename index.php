@@ -21,4 +21,7 @@ require(Var_C_PATH.'Cofecho_User_Class.php');
 
 #Code
     require Cofecho_RouteM::Go(Var_PATH.'/config/routes.php')
-            ->direct(Cofecho_Request_Class::url());
+            ->direct(
+                Cofecho_Request_Class::url(),
+                Cofecho_Request_Class::method()
+            );
