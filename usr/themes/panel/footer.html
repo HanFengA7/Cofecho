@@ -1,94 +1,32 @@
-<style>
-.foot {
-    box-sizing: border-box;
-    padding: 20px 0;
-    padding-right: 20px;
-    padding-left: 20px;
-    width: 100%;
-    background-color: #f0f0f0;
-    color: #787878;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 25px;
-    bottom: 0;
-    position: inherit;
-}
-.foot.AB-footer-morden {
-    padding: 30px 0;
-}
-</style>
-<footer class="foot mdui-text-center  AB-footer-morden">
+<?include(Usr_TP_PATH.'inc/js.source.html')?>
+<?include(Usr_TP_PATH.'inc/dialog.html')?>
+<footer class="mdui-text-center foot footer-morden">
 	<div class="mdui-typo">
 	Copyright © 2020 <a href="https://www.lychape.cn">LychApe</a>
 	</div>
 	Powered by Cofecho 0.1
 </footer>
-
-<!-- 返回顶部js -->
-<script src="//cdn.bootcss.com/mdui/0.4.3/js/mdui.min.js"></script>
-<script src='https://cdnjs.loli.net/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js'></script>
-<script>
-var scroll = new SmoothScroll("a[href*='#']");
-var $$ = mdui.JQ;
-$$('#myBtn').on('click', function () {
-  mdui.snackbar({
-    message: '啊！撞到头辣！(๑╹っ╹๑)',
-    position: 'right-top'
-  });
-});
-var $$ = mdui.JQ;
-$$('#ERRO-404').on('click', function () {
-  mdui.snackbar({
-    message: '当前状态不支持辣！(๑╹っ╹๑)',
-    position: 'right-top'
-  });
-});
-</script>
-
-<div class="mdui-dialog" id="ABOUT_AirBee">
-        <div class="mdui-dialog-content">
-        <blockquote>
-				</p> 
-				<div class="mdui-typo">       
-				<p>开发者: <a href="https://hanfen.run" target="_blank">HanFen</a> 
-                <p>开发组QQ群: 1034830519</p>
-				</div>
-				<footer>© Copyright 2019-2020 by LychApe All rights are reserved.</footer>
-		</blockquote>
-            </div>
-            <div class="mdui-dialog-actions">
-              <button class="mdui-btn mdui-ripple" mdui-dialog-close>知 道 啦 !</button>
-            </div>
-</div>
-
 <style>
+.foot {
+	box-sizing: border-box;
+	padding: 20px 0;
+	padding-right: 20px;
+	padding-left: 20px;
+	width: 100%;
+	background-color: #f0f0f0;
+	color: #787878;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 25px;
+	bottom: 0;
+	position: inherit;
+}
+.foot.footer-morden {
+	padding: 30px 0;
+}
 .size-watch{
 	width: -webkit-fill-available;
     height: 0px;
     border-width: 0px;
 }
 </style>
-<script>
-function riseze (el, cb) { var iframe = document.createElement('iframe'); 
-	iframe.setAttribute('class', 'size-watch'); el.appendChild(iframe); 
-	var oldWidth = el.offsetWidth; var oldHeight = el.offsetHeight; 
-	function sizeChange () { 
-		var width = el.offsetWidth; var height = el.offsetHeight; 
-		if (width !== oldWidth || height !== oldHeight) { 
-			cb({width: width, height: height}, {width: oldWidth, height: oldHeight}); 
-			oldWidth = width; oldHeight = height; 
-			}
-		} 
-			var timer = 0; 
-			iframe.contentWindow.onresize = function () { 
-				clearTimeout(timer); 
-				timer = setTimeout(sizeChange, 20); 
-				}; 
-		} 
-		var e = document.querySelector('.mdui-container'); 
-		riseze(e, (val, oldVal) => { 
-			myChart.resize();
-			myops.resize();
-			myChart1.resize(); 
-		});
-</script>

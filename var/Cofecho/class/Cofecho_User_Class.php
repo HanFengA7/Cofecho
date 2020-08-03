@@ -23,10 +23,24 @@ class Cofeecho_User_Class extends Cofecho_DB_Class
         parent::__construct();
     }
     
+    # [QInfo_Root($userinfo)] 博主信息查询
     function QInfo_Root($userinfo){
         $sql = 'SELECT * FROM `Cofecho_User` WHERE `uid` = 1';
         parent::query($sql);
         $rs = parent::fetchAll();
         return $rs[0][$userinfo];
     }
+
+    # [Check_Logon()] 检查是否登陆
+    public function Check_Logon(){
+        if (isset($_SESSION['LCodeKey']) || isset($_SESSION['username'])) {
+            $Key = md5($_SESSION['username'],$_SESSION['islogin']);
+            if ($_SESSION['LCodeKey'] = $Key){
+                return true;
+            }
+        }else{
+            return false;
+        }
+    }
+      
 }

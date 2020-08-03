@@ -7,11 +7,13 @@
  **/
  
 #Login	
-if (isset($_SESSION['LCodeKey'])) {
+if (isset($_SESSION['LCodeKey']) || isset($_SESSION['username'])) {
     if ($_SESSION['LCodeKey'] = md5($_SESSION['username'],$_SESSION['islogin'])){
         header('location:/Panel');
-    }
+	}
+	
 } else {
+
 $Cofeecho_User_Class = new Cofeecho_User_Class();
 $DB_s_username = $Cofeecho_User_Class->QInfo_Root('username');
 $DB_s_password = $Cofeecho_User_Class->QInfo_Root('password');
@@ -22,14 +24,14 @@ if (isset($_POST['login'])) {
 	$username = trim($_POST['username']);
 	$password = trim($_POST['password']);
 		if (($username == '') || ($password == '')) {
-            Cofecho_ErrorM::Error_A($error_tip['1'],'3','/Login');
+            Cofecho_ErrorM::Error_A($error_tip['1'],'3','/User/Login');
 		} elseif (($username != $DB_s_username ) || ($password != $DB_s_password )) {
-            Cofecho_ErrorM::Error_A($error_tip['2'],'3','/Login');
+            Cofecho_ErrorM::Error_A($error_tip['2'],'3','/User/Login');
 		} elseif (($username = $DB_s_username) && ($password = $DB_s_password)) {
 			$_SESSION['username'] = $username;
 			$_SESSION['islogin'] = 1;
 			$_SESSION['LCodeKey'] = md5($_SESSION['username'],$_SESSION['islogin']);
-			header('location:/');
+			header('location:/Panel');
 		}
     }
 #载入模板
