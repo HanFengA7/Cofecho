@@ -26,7 +26,8 @@ if (isset($_POST['login'])) {
 		if (($username == '') || ($password == '')) {
             Cofecho_ErrorM::Error_A($error_tip['1'],'3','/User/Login');
 		} elseif (($username != $DB_s_username ) || ($Cofeecho_User_Class->Password_V($password) !=1 )) {
-            Cofecho_ErrorM::Error_A($error_tip['2'],'3','/User/Login');
+			Cofecho_ErrorM::Error_A($error_tip['2'],'3','/User/Login');
+			//Cofecho_ErroM::Error_C($error_tip['2'],'5000');
 		} elseif (($username = $DB_s_username) && ( $Cofeecho_User_Class->Password_V($password) == 1 )) {
 			$_SESSION['username'] = $username;
 			$_SESSION['islogin'] = 1;

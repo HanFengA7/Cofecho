@@ -1,0 +1,41 @@
+
+<div class="mdui-container" style="width: 95%;" >
+    <form action="" method="POST">
+        <div class="mdui-textfield">
+            <input class="mdui-textfield-input" type="text" name="title" placeholder=""/>
+        </div>
+        <div id="toolbar" class="toolbar"></div>
+        <br/>
+        <div id="text-input" class="text">
+            <p>请输入内容</p>
+        </div>
+        <textarea id="text" name="text" style="display: none;"></textarea>
+        <br/>
+        <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" name="submit">UP</button>
+    </form>
+</div>
+<br/>
+    
+    
+    
+    <style type="text/css">
+        .toolbar {
+            border: 1px solid #ccc;
+        }
+        .text {
+            border: 1px solid #ccc;
+            height: 400px;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/wangEditor/3.1.1/wangEditor.min.js"></script>
+    <script type="text/javascript">
+        var E = window.wangEditor
+        var editor = new E('#toolbar', '#text-input')
+        var $text1 = $('#text')
+        editor.customConfig.onchange = function (html) {
+            $text1.val(html)
+        }
+        editor.create()
+        $text1.val(editor.txt.html())
+    </script>

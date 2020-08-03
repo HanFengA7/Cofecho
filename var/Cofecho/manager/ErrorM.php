@@ -35,4 +35,23 @@
         require(Usr_T_PATH.'main.php');
         exit;
     }
+
+    /**
+     * Cofecho_ErroM::Error_C($error_tip,$timeout);
+     **/
+    public static function Error_C($error_tip,$timeout)
+    {  
+        echo '<link 
+        href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css" 
+        rel="stylesheet">';
+        echo ('<script>mdui.snackbar({
+            message: '.$error_tip.',
+            position: "right-top",
+            timeout: "5000"
+            });</script>');
+        echo '<script 
+        src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"
+        ></script>';
+    }
+
  }

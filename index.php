@@ -11,8 +11,8 @@ require('./var/config/config.php');
 #管理器
 require('./var/Cofecho/manager/PathM.php');
     Cofecho_PathM::Go();
-require(C_Manager_PATH.'RouteM.php');
-require(C_Manager_PATH.'ErrorM.php');
+require_once(Var_M_PATH.'RouteM.php');
+require_once(Var_M_PATH.'ErrorM.php');
     
 #Class
 require(Var_C_PATH.'Cofecho_Request_Class.php');
