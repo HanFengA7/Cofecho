@@ -6,7 +6,9 @@
  * Author: 谭灿 <tancan137@foxmail.com>
  **/
 	header('Content-type:text/html; charset=utf-8');
-	if(isset($_SESSION['LCodeKey']) || isset($_SESSION['username'])){
+	$Cofeecho_User_Class = new Cofeecho_User_Class();
+
+	if($Cofeecho_User_Class->Check_Logon() == 1){
 		// 注销后的操作
 		session_start();
 		// 清除Session

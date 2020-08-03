@@ -35,7 +35,7 @@ class Cofeecho_User_Class extends Cofecho_DB_Class
     public function Check_Logon(){
         if (isset($_SESSION['LCodeKey']) || isset($_SESSION['username'])) {
             $Key = md5($_SESSION['username'],$_SESSION['islogin']);
-            if ($_SESSION['LCodeKey'] = $Key){
+            if ($_SESSION['LCodeKey'] == $Key){
                 return true;
             }else{
                 return false;
@@ -44,5 +44,18 @@ class Cofeecho_User_Class extends Cofecho_DB_Class
             return false;
         }
     }
-      
+
+    public function Password_V($password1){
+        $password2 = $this->QInfo_Root('password');
+        if (password_verify(md5($password1) , $password2)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function Password_C($password){
+        $hash_password = password_hash(md5($password), PASSWORD_BCRYPT);
+    }
+
 }
