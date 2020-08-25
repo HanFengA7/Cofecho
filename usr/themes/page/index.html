@@ -1,3 +1,9 @@
+    <div class="CofUI-jumbotron mdui-color-indigo-700">
+        <div class="mdui-container">
+            <h1 style="font-weight: 300;">Cofecho 1.0 Alpha</h1>
+            <h3 style="font-weight: 300;">High performance low occupancy blog program!</h3>
+        </div>
+    </div>
     <div class="mdui-container">
         <div class="mdui-container">
             <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1" style="top: -1.8rem;">
@@ -13,9 +19,9 @@
         <div class="mdui-col-xs-12 mdui-col-sm-4">
             <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts mdui-ripple">
               <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=<?=$Cofeecho_User_Class->QInfo_Root('qq');?>@qq.com&spec=640"/>
+                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=<?=$Cofecho_User_Class->QInfo_Root('qq');?>@qq.com&spec=640"/>
                 <div class="mdui-card-header-title" style="font-weight: 400;">
-                    <?=$Cofeecho_User_Class->QInfo_Root('username')?>
+                    <?=$Cofecho_User_Class->QInfo_Root('username')?>
                     <div class="mdui-float-right CofUI-badge-rim"></div>
                 </div>
                 <div class="mdui-card-header-subtitle">她很懒什么都没写...</div>
@@ -47,55 +53,32 @@
             <br/>
             <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts mdui-ripple">
                 <div class="mdui-valign">
-                <iframe class="mdui-center" frameborder="no" border="0" marginwidth="0" marginheight="0" height=86 src="//music.163.com/outchain/player?type=2&id=25706282&auto=0&height=66"></iframe>
+                    
                 </div>
             </div>
         </div>
         
-        
         <div class="mdui-col-xs-12 mdui-col-sm-8">
             <div class="mdui-hidden-md-up" style="margin-top: 11px;"></div>
-            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts">
-    			<div class="mdui-card-primary">
-    		    	<div class="mdui-card-primary-title">Women's clothing from zero to countless</div>
-    		    </div>
-    		    <div class="mdui-divider"></div> 
-    			<div class="mdui-card-header" style="background-color: whitesmoke;">
-                	<div class="mdui-row">
-    	                <div class="mdui-col-xs-11">   
-    		                <span itemprop="image">
-    		                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=599487077@qq.com&spec=640">
-    		                </span>
-    	                    <div class="mdui-card-header-title" style="font-weight: 400;">Mengkl</div>
-    	                    <div class="mdui-card-header-subtitle">2020-07-26</div>
-    	                </div>
-    	                <div class="mdui-col-xs-1" style="transform: translateY(-95%);">   
-    	            	<a href="" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple mdui-float-right"><i class="mdui-icon material-icons" style="color: #e0e0e0;">&#xe31c;</i></a>
-    	                </div>
-    			    </div>
-    		  	</div>		
-            </div>
-            <br/>
-            <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1 CofUI-button-ts">
-    			<div class="mdui-card-primary">
-    		    	<div class="mdui-card-primary-title">Welcome to Cofecho</div>
-    		    </div>
-    		    <div class="mdui-divider"></div> 
-    			<div class="mdui-card-header" style="background-color: whitesmoke;">
-                	<div class="mdui-row">
-    	                <div class="mdui-col-xs-11">   
-    		                <span itemprop="image">
-    		                <img class="mdui-card-header-avatar" src="https://q2.qlogo.cn/headimg_dl?dst_uin=599487077@qq.com&spec=640">
-    		                </span>
-    	                    <div class="mdui-card-header-title" style="font-weight: 400;">Mengkl</div>
-    	                    <div class="mdui-card-header-subtitle">2020-07-26</div>
-    	                </div>
-    	                <div class="mdui-col-xs-1" style="transform: translateY(-95%);">   
-    	            	<a href="" class="mdui-btn mdui-btn-icon mdui-color-grey-100 mdui-ripple mdui-float-right"><i class="mdui-icon material-icons" style="color: #e0e0e0;">&#xe31c;</i></a>
-    	                </div>
-    			    </div>
-    		  	</div>		
-            </div>
+<script
+    src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
+    integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
+    crossorigin="anonymous"
+></script>
+            <?
+                if (isset($_GET["p"])) {
+                    if (is_numeric($_GET["p"])) {
+                        $page = $_GET["p"];
+                        $Cofecho_Nkan_Class->Mupage($page,4);
+                    }else{
+                        $error_tip['1'] = '"参数异常!!!"';
+                        $ErrorM -> Error_C_no($error_tip['1'],'3000');
+                        $Cofecho_Nkan_Class->Mupage(1,'4');
+                    }
+                }else{
+                $Cofecho_Nkan_Class->Mupage(1,'4');
+                }
+            ?>
             
         </div>
       </div>

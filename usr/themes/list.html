@@ -1,6 +1,6 @@
 <header>
-<div class="mdui-drawer mdui-color-grey-50 mdui-drawer-close" id="main-drawer" >
-    <div class="mdui-list" mdui-collapse="{accordion:true}" style="margin-bottom: 56px;">
+<div class="mdui-drawer mdui-color-grey-50 mdui-drawer-close" id="main-drawer" style="min-height: 100%;">
+    <div class="mdui-list" mdui-collapse="{accordion:true}" style="margin-bottom: 56px; padding-bottom: 100px;">
         
         <a href="<?php echo $GLOBALS['url'];?>" rel="noopener">
           <li class="mdui-list-item mdui-ripple">
@@ -8,14 +8,39 @@
             <div class="mdui-list-item-content">首  页</div>
           </li>
         </a>
-
+        
+        <li class="mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_iconfuzhi"></i>
+          <div class="mdui-list-item-content">朋  友</div>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_shoucang"></i>
+          <div class="mdui-list-item-content">关  于</div>
+        </li>
+          
+      <?if($Cofecho_User_Class->Check_Logon() == 0){?>
         <a href="<?php echo $GLOBALS['url'];?>/User/Login" rel="noopener">
-          <li class="mdui-list-item mdui-ripple" mdui-dialog="{target:'#ABOUT_AirBee'}">
-            <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_iconfuzhi"></i>
-            <div class="mdui-list-item-content">登陆</div>
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_mimayaochi"></i>
+            <div class="mdui-list-item-content">登  陆</div>
           </li>
         </a>
-
+      <?}else{?>
+        <a href="<?php echo $GLOBALS['url'];?>/Panel" rel="noopener">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_daohangzhinanzhen"></i>
+            <div class="mdui-list-item-content">管理中心</div>
+          </li>
+        </a>
+      <?}?>
+          <li class="mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_jilu"></i>
+              <span class="mdui-list-item-content mdui-text-color-theme-text">文章归档</span>
+              <span class="mdui-list-item-avatar" style="background: -webkit-linear-gradient(to right, #654ea3, #eaafc8);">
+                  <?=$Cofecho_Nkan_Class->NkanNUM()?>
+              </span>
+          </li>
           <li class="mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_xiuxiankafeiyule"></i>
               <span class="mdui-list-item-content mdui-text-color-theme-text">留言点滴</span>
@@ -23,12 +48,8 @@
                   <?="1"?>
               </span>
           </li>
-                      
-          <li class="mdui-list-item mdui-ripple" mdui-dialog="{target:'#ABOUT_Cofecho'}">
-            <i class="mdui-list-item-icon mdui-icon Cofecho_icon Cofecho_icon_shoucang"></i>
-            <div class="mdui-list-item-content">Cofecho</div>
-          </li>
         
     </div>
+    <div class="copyright"><p>© 2020 Cofecho</p><p>Powered by <a href="https://lychape.cn" target="_blank">Lychape</a> &amp; <a href="https://hanfen.run" target="_blank">HanFen</a></p></div>
 </div>
 </header>

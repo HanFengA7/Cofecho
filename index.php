@@ -18,6 +18,7 @@ require_once(Var_M_PATH.'ErrorM.php');
 require(Var_C_PATH.'Cofecho_Request_Class.php');
 require(Var_C_PATH.'Cofecho_DB_Class.php');
 require(Var_C_PATH.'Cofecho_User_Class.php');
+require(Var_C_PATH.'Cofecho_Nkan_Class.php');
 
 #Code
     require Cofecho_RouteM::Go(Var_PATH.'/config/routes.php')

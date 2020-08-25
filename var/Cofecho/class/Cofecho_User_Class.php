@@ -9,9 +9,9 @@
 require_once(Var_C_PATH.'Cofecho_DB_Class.php');
 
 /**
- * [Cofeecho_User_Class]
+ * [Cofecho_User_Class]
  */
-class Cofeecho_User_Class extends Cofecho_DB_Class
+class Cofecho_User_Class extends Cofecho_DB_Class
 {
     protected $userinfo;
     

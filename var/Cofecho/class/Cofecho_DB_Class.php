@@ -17,7 +17,7 @@ class Cofecho_DB_Class{
   /*数据库连接*/
   public function connect(){
     try {
-        $this->pdo = new PDO("mysql:host=".$GLOBALS['host'].";dbname=".$GLOBALS['database'], $GLOBALS['username'], $GLOBALS['password']);
+        $this->pdo = new PDO("mysql:host=".$GLOBALS['host'].";dbname=".$GLOBALS['database'], $GLOBALS['DB_username'], $GLOBALS['DB_password']);
         $this->pdo->query('set names utf8;');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //把结果序列化成stdClass

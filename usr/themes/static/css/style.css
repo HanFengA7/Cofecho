@@ -63,3 +63,46 @@
 {
     border-radius: .5rem;
 }
+
+
+
+.copyright {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 16px;
+    bottom: 0;
+}
+.copyright p {
+    margin: 0;
+    overflow: hidden;
+    color: rgba(0,0,0,.38);
+    font-size: 13px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.copyright a {
+    color: rgba(0,0,0,.52);
+    text-decoration: none;
+}
+
+.search-bar {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 420px;
+	height: 46px;
+	margin-left: 30px;
+	background-color: #f1f3f4;
+	border-radius: 8px;
+	transition-duration: .18s;
+	transition-property: background-color,box-shadow;
+}
+.search-bar input {
+	flex: 1;
+	height: 46px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}

@@ -1,41 +1,32 @@
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/simditor/2.3.28/styles/simditor.min.css" rel="stylesheet">
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="<?=($GLOBALS['url'].Usr_Tsj_PATH.'module.js')?>"></script>
+<script src="<?=($GLOBALS['url'].Usr_Tsj_PATH.'hotkeys.min.js')?>"></script>
+<script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/simple-uploader/3.0.0/simple-uploader.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/simditor/2.3.28/lib/simditor.min.js"></script>
 
 <div class="mdui-container" style="width: 95%;" >
     <form action="" method="POST">
-        <div class="mdui-textfield">
-            <input class="mdui-textfield-input" type="text" name="title" placeholder=""/>
+    <br/>
+    <div class="mdui-card CofUI-shadow-A1">
+        <div class="mdui-textfield" style="padding-top: 0px;padding-bottom: 0px; border: 1px solid #c9d8db;">
+        <input class="mdui-textfield-input" type="text" name="title" placeholder=""/>
         </div>
-        <div id="toolbar" class="toolbar"></div>
+    </div>
+    <br/>
+    <div class="mdui-card CofUI-shadow-A1">
+        <textarea id="editor" name="text" autofocus></textarea>
+    </div>
+    <script>
+        var editor = new Simditor({
+            textarea: $('#editor'),
+            
+        });        
+    </script>
         <br/>
-        <div id="text-input" class="text">
-            <p>请输入内容</p>
-        </div>
-        <textarea id="text" name="text" style="display: none;"></textarea>
-        <br/>
-        <button class="mdui-btn mdui-color-theme-accent mdui-ripple mdui-float-right" name="submit">UP</button>
+        <button class="mdui-btn CofUI-shadow-A1 mdui-color-white mdui-ripple mdui-float-right" name="submit" style="border: 1px solid #c9d8db;">UP</button>
     </form>
 </div>
 <br/>
-    
-    
-    
-    <style type="text/css">
-        .toolbar {
-            border: 1px solid #ccc;
-        }
-        .text {
-            border: 1px solid #ccc;
-            height: 400px;
-        }
-    </style>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/wangEditor/3.1.1/wangEditor.min.js"></script>
-    <script type="text/javascript">
-        var E = window.wangEditor
-        var editor = new E('#toolbar', '#text-input')
-        var $text1 = $('#text')
-        editor.customConfig.onchange = function (html) {
-            $text1.val(html)
-        }
-        editor.create()
-        $text1.val(editor.txt.html())
-    </script>
+

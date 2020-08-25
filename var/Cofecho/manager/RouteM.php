@@ -33,6 +33,11 @@ class Cofecho_RouteM{
         $this->routes['POST'][$url] = $controller;
     }
     
+    public function all($url,$controller){
+        $this->routes['GET'][$url] = $controller;
+        $this->routes['POST'][$url] = $controller;
+    }
+    
     public function define($routes){
         $this->routes = $routes;
     }
@@ -42,7 +47,7 @@ class Cofecho_RouteM{
             return $this->routes[$methodType][$url];
         }else{
             $ERROEX = '     找不到  <kbd>' . $_SERVER['REQUEST_URI'] . '</kbd>   相关路径!';
-            $Cofeecho_User_Class = new Cofeecho_User_Class();
+            $Cofecho_User_Class = new Cofecho_User_Class();
             $page['body_class'] = 'mdui-loaded mdui-color-grey-50';
             $page['body_file'] = (Usr_Tp_PATH.'error.html');
             require(Usr_T_PATH.'main.php');

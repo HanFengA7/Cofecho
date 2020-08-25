@@ -6,9 +6,9 @@
  * Author: 谭灿 <tancan137@foxmail.com>
  **/
 	header('Content-type:text/html; charset=utf-8');
-	$Cofeecho_User_Class = new Cofeecho_User_Class();
+	$Cofecho_User_Class = new Cofecho_User_Class();
 
-	if($Cofeecho_User_Class->Check_Logon() == 1){
+	if($Cofecho_User_Class->Check_Logon() == 1){
 		// 注销后的操作
 		session_start();
 		// 清除Session

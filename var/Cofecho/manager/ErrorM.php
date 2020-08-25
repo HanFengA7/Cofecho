@@ -37,21 +37,28 @@
     }
 
     /**
-     * Cofecho_ErroM::Error_C($error_tip,$timeout);
+     * $ErrorM -> Error_C($error_tip,$timeout);
      **/
-    public static function Error_C($error_tip,$timeout)
+    public function Error_C($error_tip,$timeout)
     {  
-        echo '<link 
-        href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css" 
-        rel="stylesheet">';
         echo ('<script>mdui.snackbar({
             message: '.$error_tip.',
             position: "right-top",
-            timeout: "5000"
+            timeout: '.$timeout.'
             });</script>');
-        echo '<script 
-        src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"
-        ></script>';
+        exit;
+    }
+    
+    /**
+     * $ErrorM -> Error_C_no($error_tip,$timeout);
+     **/
+    public function Error_C_no($error_tip,$timeout)
+    {  
+        echo ('<script>mdui.snackbar({
+            message: '.$error_tip.',
+            position: "right-top",
+            timeout: '.$timeout.'
+            });</script>');
     }
 
  }
