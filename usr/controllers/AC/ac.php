@@ -8,8 +8,14 @@
 $Cofecho_DB_Class = new Cofecho_DB_Class();
 $Cofecho_Nkan_Class = new Cofecho_Nkan_Class();
 $ErrorM = new Cofecho_ErrorM();
+$Nkan = new Cofecho_Nkan_Class();
 
-#载入模板
+if (is_numeric($_GET["cid"])) {
+    $cid = $_GET["cid"];
+}else{
+    $error_tip['1'] = '"参数异常!!!"';
+    $ErrorM -> Error_C_no($error_tip['1'],'3000');
+}
 $page['body_class'] = 'mdui-loaded';
 $page['body_file'] = (Usr_Tp_PATH.'ac.html');
 require(Usr_T_PATH.'main.php');

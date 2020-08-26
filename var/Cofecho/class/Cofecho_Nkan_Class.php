@@ -97,8 +97,11 @@ class Cofecho_Nkan_Class extends Cofecho_DB_Class
          echo $page_banner;
     } 
     
-    public function ACInfo($cid){
-        
+    public function ACInfo($acinfo,$cid){
+        $sql = "SELECT * FROM Cofecho_Contents JOIN Cofecho_User WHERE `cid` = "."{$cid}";
+        parent::query($sql);
+        $rs = parent::fetchAll();
+        return $rs[0][$acinfo];
     }
     
     public function ACContent($cid){
