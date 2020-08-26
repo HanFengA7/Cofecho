@@ -1,4 +1,12 @@
 /* CofUI_Assembly */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #324e63;
+  padding:0;
+  margin:0;
+}
+
 
 .CofUI-jumbotron
 {
