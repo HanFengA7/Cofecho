@@ -1,17 +1,15 @@
 <style>
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-
 .tiles {
 
   width: 100%;
-  height: 450px;
+  height: 160px;
   perspective: 1000px;
 }
-
 .col {
   position: relative;
   float: left;
-  margin: 6px;
+  margin: 9px;
   width: calc(150px - 12px);
   height: calc(150px - 12px);
 }
@@ -82,7 +80,6 @@
   font-size: 40px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  border-radius: 2px;
   z-index: 2;
   backface-visibility: hidden;
 }
@@ -96,10 +93,8 @@
   background: #333;
   color: #FFF;
   font-size: 20px;
-  border-radius: 2px;
   transition-delay: .15s;
 }
-
 .col:nth-child(1) .box:before {
   content: "\f140";
   background: #3f51b5;
@@ -148,114 +143,294 @@
   content: "cofecho";
   background: #f16528;
 }
-.col:nth-child(7) .box:before {
-  content: "\f13c";
-  background: #0170ba;
+.Panel_icon{
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
 }
-.col:nth-child(7) .box:after {
-  background: #0170ba;
+
+.profile-card-social__item {
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+  margin: 15px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #405de6;
+  box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
+  position: relative;
+  font-size: 21px;
+  flex-shrink: 0;
+  transition: all .3s;
 }
-.col:nth-child(8) .box:before {
-  content: "\f19a";
-  background: #21759b;
+@media screen and (max-width: 768px) {
+  .profile-card-social__item {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
 }
-.col:nth-child(8) .box:after {
-  background: #21759b;
+@media screen and (min-width: 768px) {
+  .profile-card-social__item:hover {
+    transform: scale(1.2);
+  }
 }
-.col:nth-child(9) .box:before {
-  content: "\f09b";
-  background: #323131;
+.profile-card-social__item.facebook {
+  background: linear-gradient(45deg, #3b5998, #0078d7);
+  box-shadow: 0px 4px 30px rgba(43, 98, 169, 0.5);
 }
-.col:nth-child(9) .box:after {
-  background: #323131;
+.profile-card-social__item.twitter {
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.7);
 }
-.col:nth-child(10) .box:before {
-  content: "\f1cb";
-  background: #000000;
+.profile-card-social__item.instagram {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  box-shadow: 0px 4px 30px rgba(120, 64, 190, 0.6);
 }
-.col:nth-child(10) .box:after {
-  background: #000000;
+.profile-card-social__item.behance {
+  background: linear-gradient(45deg, #1769ff, #213fca);
+  box-shadow: 0px 4px 30px rgba(27, 86, 231, 0.7);
 }
-.col:nth-child(11) .box:before {
-  content: "\f268";
-  background: #fec540;
+.profile-card-social__item.github {
+    background: linear-gradient(45deg, #333333, #626b73);
+    box-shadow: 0px 0px 8px 1px rgba(63, 65, 67, 0.6);
 }
-.col:nth-child(11) .box:after {
-  background: #fec540;
+.profile-card-social__item.codepen {
+  background: linear-gradient(45deg, #324e63, #414447);
+  box-shadow: 0px 4px 30px rgba(55, 75, 90, 0.6);
 }
-.col:nth-child(12) .box:before {
-  content: "\f269";
-  background: #ef8043;
+.profile-card-social__item.link {
+  background: linear-gradient(45deg, #d5135a, #f05924);
+  box-shadow: 0px 4px 30px rgba(223, 45, 70, 0.6);
 }
-.col:nth-child(12) .box:after {
-  background: #ef8043;
-}
-.col:nth-child(13) .box:before {
-  content: "\f282";
-  background: #2c74be;
-}
-.col:nth-child(13) .box:after {
-  background: #2c74be;
-}
-.col:nth-child(14) .box:before {
-  content: "\f267";
-  background: #409ed4;
-}
-.col:nth-child(14) .box:after {
-  background: #409ed4;
-}
-.col:nth-child(15) .box:before {
-  content: "\f26a";
-  background: #cc0f15;
-}
-.col:nth-child(15) .box:after {
-  background: #cc0f15;
+.profile-card-social .icon-font {
+  display: inline-flex;
 }
 </style>
-  
+ 
 <div class="mdui-container">
-  <div class='tiles'>
-  <div class='col'>
-    <a href="https://cofecho.lychape.cn/"></a>
-    <a href="https://cofecho.lychape.cn/"></a>
-    <a href="https://cofecho.lychape.cn/"></a>
-    <a href="https://cofecho.lychape.cn/"></a>
-    <div class='box'></div>
-  </div>
-  <div class='col'>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <div class='box'></div>
-  </div>
-  <div class='col'>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <div class='box'></div>
-  </div>
-  <div class='col'>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <div class='box b-1'></div>
-  </div>
-  <div class='col'>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <div class='box'></div>
-  </div>
-  <div class='col'>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <a href="#"></a>
-    <div class='box'></div>
-  </div>
-</div>
+    
+    <div class='tiles mdui-hidden-sm-down'>
+      <div class='col'>
+        <a href="<?=$GLOBALS['url']?>"></a>
+        <a href="<?=$GLOBALS['url']?>"></a>
+        <a href="<?=$GLOBALS['url']?>"></a>
+        <a href="<?=$GLOBALS['url']?>"></a>
+        <div class='box'></div>
+      </div>
+      <div class='col'>
+        <a href="https://bbs.lychape.cn"></a>
+        <a href="https://bbs.lychape.cn"></a>
+        <a href="https://bbs.lychape.cn"></a>
+        <a href="https://bbs.lychape.cn"></a>
+        <div class='box'></div>
+      </div>
+      <div class='col'>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <div class='box'></div>
+      </div>
+      <div class='col'>
+        <a href="<?=$GLOBALS['url'].'/Panel/AC-Write'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel/AC-Write'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel/AC-Write'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel/AC-Write'?>"></a>
+        <div class='box b-1'></div>
+      </div>
+      <div class='col'>
+        <a href="<?=$GLOBALS['url'].'/User/Info'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/User/Info'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/User/Info'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/User/Info'?>"></a>
+        <div class='box'></div>
+      </div>
+      <div class='col'>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <a href="<?=$GLOBALS['url'].'/Panel'?>"></a>
+        <div class='box'></div>
+      </div>
+    </div>
+    
+    <br/>
+    
+    <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1">
+        <div class="mdui-card-header" style="height: 60px;">
+          <svg class="mdui-card-header-avatar Panel_icon" aria-hidden="true">
+            <use xlink:href="#Cofecho_icon_weixingfashetaiSVG"></use>
+          </svg>
+          <div class="mdui-card-header-title">概况</div>
+          <div class="mdui-card-header-subtitle">Overview</div>
+        </div>
+        <div class="mdui-card-content" style="padding: 10px;">
+            <div class="mdui-row-xs-3">
+                
+                <div class="mdui-col">
+                  <div class="mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                    <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                      <div class="mdui-card-primary-title">文章：<a style="opacity: .54;"><?=$Cofecho_Nkan_Class->NkanNUM()?></a></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mdui-col">
+                  <div class="mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                    <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                      <div class="mdui-card-primary-title">留言：<a style="opacity: .54;"><?="0"?></a></div></div>
+                    </div>
+                </div>
+                
+                <div class="mdui-col">
+                  <div class="mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                    <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                      <div class="mdui-card-primary-title">访客：<a style="opacity: .54;"><?="0"?></a></div>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <br/>
+    
+    <div class="mdui-row">
+        
+    <div class="mdui-col-xs-12 mdui-col-sm-8">
+    <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1">
+        <div class="mdui-card-header" style="height: 60px;">
+          <svg class="mdui-card-header-avatar Panel_icon" aria-hidden="true">
+            <use xlink:href="#Cofecho_icon_tianwentaiSVG"></use>
+          </svg>
+          <div class="mdui-card-header-title">关于</div>
+          <div class="mdui-card-header-subtitle">About</div>
+        </div>
+        <div class="mdui-card-content" style="padding: 10px;">
+            <div class="mdui-row-xs-2">
+                
+                <div class="mdui-col">
+                  <div class="mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                    <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                      <div class="mdui-card-primary-title">Cofecho</div>
+                      <div class="mdui-card-primary-subtitle">版本 0.1.2020828 (官方内部版本)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mdui-col">
+                  <div class="mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                    <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                      <div class="mdui-card-primary-title">PHP</div>
+                      <div class="mdui-card-primary-subtitle">版本 7.4.9 </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mdui-col">
+                  <div class="mdui-card mdui-shadow-0 CofUI-fillet-A1" style="margin-top: 10px;background-color: rgb(199 199 198 / 16%);">
+                    <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                      <div class="mdui-card-primary-title">Developer</div>
+                      <div class="mdui-card-primary-subtitle">HanFengA7</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mdui-col">
+                  <div class="mdui-card mdui-shadow-0 CofUI-fillet-A1" style="margin-top: 10px;background-color: rgb(199 199 198 / 16%);">
+                    <div class="mdui-card-primary" style="padding: 0px 15px 0px 15px;">
+                        <a href="https://github.com/HanFengA7/Cofecho" class="profile-card-social__item github" style="width: 50px;height: 50px;">
+                        	<span class="icon-font">
+                                <svg class="Cofecho_icon" aria-hidden="true">
+                                    <use xlink:href="#Cofecho_icon_github"></use>
+                                </svg>
+                        	</span>
+                        </a>
+                        <a href="#" class="profile-card-social__item github" style="width: 50px;height: 50px;">
+                        	<span class="icon-font">
+                                <svg class="Cofecho_icon" aria-hidden="true">
+                                    <use xlink:href="#Cofecho_icon_qq02"></use>
+                                </svg>
+                        	</span>
+                        </a>
+                        <a href="#" class="profile-card-social__item github" style="width: 50px;height: 50px;">
+                        	<span class="icon-font">
+                                <svg class="Cofecho_icon" aria-hidden="true">
+                                    <use xlink:href="#Cofecho_icon_i-safe"></use>
+                                </svg>
+                        	</span>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+<style>
+  .todo__item {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 21px;
+  flex-shrink: 0;
+  transition: all .3s;
+  }
+  .todo__item:hover {
+    transform: scale(1.2);
+  }
+</style>
+    
+    
+    <div class="mdui-col-xs-12 mdui-col-sm-4">
+    <div class="mdui-card CofUI-shadow-A1 CofUI-fillet-A1">
+        <div class="mdui-card-header" style="height: 60px;">
+          <svg class="mdui-card-header-avatar Panel_icon" aria-hidden="true" style="border-radius:0%";>
+            <use xlink:href="#Cofecho_icon_To_Do"></use>
+          </svg>
+          <div class="mdui-card-header-title">清单</div>
+          <div class="mdui-card-header-subtitle">Todo</div>
+          <button class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-color-grey-50 mdui-float-right" style="margin-top: -35px;"><i class="mdui-icon material-icons">add</i></button>
+        </div>
+        <div class="mdui-card-content" style="padding: 10px;">
+            
+            <div class="mdui-col" style="margin-top: 8px;">
+              <div class="todo__item mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                  <div class="mdui-card-primary-title" style="font-size: 15px;line-height: 15px;">高效ToDo - 高效率.慢生活</div>
+                  <div class="mdui-card-primary-subtitle" style="line-height: 15px;">2020/8/28</div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="mdui-col" style="margin-top: 8px;">
+              <div class="todo__item mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                  <div class="mdui-card-primary-title" style="font-size: 15px;line-height: 15px;">高效ToDo - 高效率.慢生活</div>
+                  <div class="mdui-card-primary-subtitle" style="line-height: 15px;">2020/8/28</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mdui-col" style="margin-top: 8px;">
+              <div class="todo__item mdui-card mdui-shadow-0 CofUI-fillet-A1" style="background-color: rgb(199 199 198 / 16%);">
+                <div class="mdui-card-primary" style="padding: 10px 15px 10px 15px;">
+                  <div class="mdui-card-primary-title" style="font-size: 15px;line-height: 15px;">高效ToDo - 高效率.慢生活</div>
+                  <div class="mdui-card-primary-subtitle" style="line-height: 15px;">2020/8/28</div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+  
 </div>

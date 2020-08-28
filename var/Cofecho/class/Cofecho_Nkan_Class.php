@@ -24,6 +24,14 @@ class Cofecho_Nkan_Class extends Cofecho_DB_Class
         parent::__construct();
     }
     
+    # [ACInfo()] 文章信息查询
+    public function ACInfo($acinfo,$cid){
+        $sql = "SELECT * FROM Cofecho_Contents JOIN Cofecho_User WHERE `cid` = "."{$cid}";
+        parent::query($sql);
+        $rs = parent::fetchAll();
+        return $rs[0][$acinfo];
+    }
+    
     # [NkanNUM()] 文章总数
     public function NkanNUM(){
         $sql = 'SELECT * FROM Cofecho_Contents';
@@ -96,16 +104,5 @@ class Cofecho_Nkan_Class extends Cofecho_DB_Class
          $page_banner.="</div>";
          echo $page_banner;
     } 
-    
-    public function ACInfo($acinfo,$cid){
-        $sql = "SELECT * FROM Cofecho_Contents JOIN Cofecho_User WHERE `cid` = "."{$cid}";
-        parent::query($sql);
-        $rs = parent::fetchAll();
-        return $rs[0][$acinfo];
-    }
-    
-    public function ACContent($cid){
-        
-    }
     
 }

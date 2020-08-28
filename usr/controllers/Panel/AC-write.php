@@ -12,7 +12,7 @@ require(Usr_TP_PATH.'main.php');
 
 if (isset($_POST['submit'])) {
     $title = trim(htmlspecialchars($_POST['title']));
-    $text = htmlspecialchars($_POST['text']);
+    $text = $_POST['text'];
 
     $error_tip['1'] = '"标题不能为空！"';
     $error_tip['2'] = '"内容不能为空！"';

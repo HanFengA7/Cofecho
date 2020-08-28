@@ -8,7 +8,8 @@
 <?require(Usr_TP_PATH.'head.html')?>
 <?require(Usr_TP_PATH.'list.html')?>
 <?require(Usr_TP_PATH.'header.html')?>
-<body class="<?=$page['body_class']?>" style="background-image: url(//i.stay.pub/2020/08/08/815d733fbe803.png);">
+<body class="<?=$page['body_class']?>">
+<!--style="background-image: url(//i.stay.pub/2020/08/08/815d733fbe803.png);"!-->
     <?require($page['body_file'])?>
     <?require(Usr_TP_PATH.'footer.html')?>
 </body>
