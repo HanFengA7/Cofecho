@@ -14,6 +14,8 @@ body {
     padding-left: 0;
     border-radius: 0;
     padding: 3rem 2rem;
+    background-color: #303f9f!important;
+    color: #fff!important;
 }
 
 .CofUI-badge-rim 

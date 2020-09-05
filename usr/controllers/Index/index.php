@@ -12,4 +12,3 @@ $ErrorM = new Cofecho_ErrorM();
 $page['body_class'] = 'mdui-loaded';
 $page['body_file'] = (Usr_Tp_PATH.'index.html');
 require(Usr_T_PATH.'main.php');
-
